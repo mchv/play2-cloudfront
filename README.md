@@ -7,7 +7,7 @@ Cloudfront enables to set up a CDN easily. This module helps to integrate your C
 Configure a new resolver:
 
 ```scala
-resolvers += "Mariot Chauvin" at "http://mchv.me/repository"
+resolvers += "Mariot Chauvin repository" at "http://mchv.me/repository"
 ```
 
 Add the library dependency:
@@ -70,5 +70,5 @@ cdn-url="http://d7471vfo50fqt.cloudfront.net"
 
 ## More
 
-The module is based on [James Ward tutorial](http://www.jamesward.com/2012/08/08/edge-caching-with-play2-heroku-cloudfront.)
+The module is based on [James Ward tutorial](http://www.jamesward.com/2012/08/08/edge-caching-with-play2-heroku-cloudfront)
 If you want to know more or avoid the dependency, please read it.
