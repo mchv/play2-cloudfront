@@ -13,14 +13,16 @@ resolvers += "Mariot Chauvin" at "http://mchv.me/repository"
 Add the library dependency:
 
 ```scala
-libraryDependencies += "mchv" %% "play2-cloudfront" % "0.1"
+libraryDependencies += "mchv" %% "play2-cloudfront" % "1.0"
 ```
 
 ## Use a custom controller
 
-Create a new file named app/controllers/RemoteAssets.scala that contains:
+Create a new file named `RemoteAssets.scala` that contains:
 
 ```scala
+package controllers
+
 import controllers._
 
 object RemoteAssets extends Remote {
@@ -32,7 +34,7 @@ object RemoteAssets extends Remote {
 
 Update the router file with the call to your custom controller for your assets:
 
-```
+```properties
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.RemoteAssets.at(path="/public", file)
 ```
@@ -60,9 +62,13 @@ Update your views to refer to your controller to fetch the url:
 
 ## Configure the module with your cloudfront settings
 
-Add your Cloudfront url to the application.conf:
+Add your Cloudfront url to the `application.conf`:
 
-```
+```properties
 cdn-url="http://d7471vfo50fqt.cloudfront.net"
 ```
 
+## More
+
+The module is based on [James Ward tutorial](http://www.jamesward.com/2012/08/08/edge-caching-with-play2-heroku-cloudfront.)
+If you want to know more or avoid the dependency, please read it.
