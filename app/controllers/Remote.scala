@@ -17,7 +17,7 @@ trait Remote extends Controller {
   private val df: DateTimeFormatter =
     DateTimeFormat.forPattern("EEE, dd MMM yyyy HH:mm:ss '"+timeZoneCode+"'").withLocale(java.util.Locale.ENGLISH).withZone(DateTimeZone.forID(timeZoneCode))
 
-  type ResultWithHeaders = Result { def withHeaders(headers: (String, String)*): Result }
+  type ResultWithHeaders = SimpleResult { def withHeaders(headers: (String, String)*): SimpleResult }
 
   def at(path: String, file: String): Action[AnyContent] = Action { request =>
     val action = Assets.at(path, file)
