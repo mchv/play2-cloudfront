@@ -13,7 +13,7 @@ resolvers += "Mariot Chauvin repository" at "http://mchv.me/repository"
 Add the library dependency:
 
 ```scala
-libraryDependencies += "mchv" %% "play2-cloudfront" % "1.0"
+libraryDependencies += "mchv" %% "play2-cloudfront" % "1.1"
 ```
 
 ## Use a custom controller
@@ -51,7 +51,7 @@ Update your views to refer to your controller to fetch the url:
         <title>@title</title>
         <link rel="stylesheet" media="screen" href="@RemoteAssets.url("stylesheets/main.css")">
         <link rel="shortcut icon" type="image/png" href="@RemoteAssets.url("images/favicon.png")">
-        <script src="@RemoteAssets.url("javascripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+        <script src="@RemoteAssets.url("javascripts/jquery-1.9.1.min.js")" type="text/javascript"></script>
     </head>
     <body>
         @content
